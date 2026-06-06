@@ -1,14 +1,107 @@
+import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
 import FaqSection from "@/components/FaqSection";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://plugwisenj.com/#organization",
+      name: "PlugWise NJ",
+      url: "https://plugwisenj.com",
+      description:
+        "PlugWise NJ is a quote coordination platform that helps New Jersey homeowners request Level 2 EV charger installation quotes and connect with independent licensed installation providers where available.",
+      areaServed: {
+        "@type": "State",
+        name: "New Jersey",
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": "https://plugwisenj.com/#service",
+      name: "EV Charger Installation Quote Coordination",
+      provider: { "@id": "https://plugwisenj.com/#organization" },
+      description:
+        "PlugWise NJ helps homeowners request Level 2 EV charger installation quotes from photos. Electrical work is performed by independent licensed electricians. Availability varies by location.",
+      areaServed: {
+        "@type": "State",
+        name: "New Jersey",
+      },
+      serviceType: "EV Charger Installation Quote Coordination",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How much does EV charger installation cost in NJ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most Level 2 installs in New Jersey range from roughly $800 to $2,500 depending on panel capacity, the run distance to your install spot, indoor vs. outdoor work, and whether trenching or a panel upgrade is needed. We scope these from your photos so quotes reflect your actual home.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need a permit to install a Level 2 charger in New Jersey?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. NJ requires an electrical permit and inspection for Level 2 charger installations. Licensed electricians in our network handle the permit process and coordinate inspection so the work is up to code.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does PSE&G offer EV charger rebates?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "PSE&G has run EV charger incentive programs for eligible residential customers. Program terms and amounts change over time — always verify current eligibility and details directly with the utility before relying on a specific amount.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "NEMA 14-50 vs. hardwired Level 2 charger — what’s best?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A NEMA 14-50 outlet offers flexibility and works with plug-in chargers, while a hardwired install supports higher continuous amperage and is often recommended for outdoor or higher-power setups. The right choice depends on your charger, panel, and location.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I install an EV charger outside?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Many Level 2 chargers are rated for outdoor use. Outdoor installs may require weatherproof enclosures, conduit, or trenching depending on the run, which a licensed electrician will account for in the quote.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can condos or apartments install EV chargers?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Often yes, though it typically requires coordination with your HOA or property management and may involve shared metering or dedicated circuits. We can help you understand the options for multi-unit and shared-parking situations.",
+          },
+        },
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <main>
       {/* ============ HERO ============ */}
       <header className="hero">
         <nav className="topnav" aria-label="Main navigation">
           <div className="topnav-inner">
-            <a href="/" className="brand" aria-label="PlugWise NJ home">
+            <Link href="/" className="brand" aria-label="PlugWise NJ home">
               <span className="brand-bolt">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
@@ -16,7 +109,7 @@ export default function Home() {
               </span>
               <span className="brand-name">PlugWise</span>
               <span className="nj-pill">NJ</span>
-            </a>
+            </Link>
             <div className="brand-sub">
               New Jersey
               <br />
@@ -404,7 +497,7 @@ export default function Home() {
             ))}
           </div>
           <div className="charger-foot">
-            <span>Not sure which charger is right for you? We'll help you choose.</span>
+            <span>Not sure which charger is right for you? We&apos;ll help you choose.</span>
             <a href="#quote" className="btn-ghost-light">Get My Recommendation</a>
           </div>
         </div>
@@ -455,6 +548,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </main>
 
       {/* ============ FOOTER ============ */}
       <footer>
