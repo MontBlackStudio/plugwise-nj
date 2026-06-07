@@ -460,6 +460,9 @@ export default function EvChargerInstallationNj() {
                 <Link href="/pseg-ev-charger-rebate" className="svc-back">Read our PSE&amp;G EV charger rebate guide for NJ homeowners →</Link>
               </p>
               <p className="svc-link-row">
+                <Link href="/jcpl-ev-charger-rebate" className="svc-back">Read our JCP&amp;L EV charger rebate guide for NJ homeowners →</Link>
+              </p>
+              <p className="svc-link-row">
                 <Link href="/#cost" className="svc-back">See current rebate program links on the home page →</Link>
               </p>
             </div>

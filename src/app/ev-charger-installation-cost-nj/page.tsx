@@ -585,6 +585,11 @@ export default function EvChargerInstallationCostNj() {
                   Read our PSE&amp;G EV charger rebate guide →
                 </Link>
               </p>
+              <p className="cost-link-row">
+                <Link href="/jcpl-ev-charger-rebate" className="cost-inline-link">
+                  Read our JCP&amp;L EV charger rebate guide →
+                </Link>
+              </p>
             </div>
           </div>
         </section>

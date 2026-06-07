@@ -544,6 +544,9 @@ export default function PsegEvChargerRebate() {
               <Link href="/ev-charger-installation-cost-nj" className="btn-ghost-light">
                 Installation Cost in NJ
               </Link>
+              <Link href="/jcpl-ev-charger-rebate" className="btn-ghost-light">
+                JCP&amp;L Rebate Guide
+              </Link>
               <Link href="/" className="btn-ghost-light">Back to PlugWise NJ home</Link>
             </div>
           </div>

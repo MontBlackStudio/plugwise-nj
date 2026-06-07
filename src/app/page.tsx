@@ -417,9 +417,9 @@ export default function Home() {
               <div className="rebate">
                 <div className="rebate-logo" style={{ color: "#1F7A3D", fontStyle: "italic" }}>JCP&amp;L</div>
                 <div>
-                  <h5>JCP&amp;L Drive Green Program</h5>
-                  <p>Up to $350 for eligible Level 2 charger installs.</p>
-                  <a href="https://www.jcp-l.com/products-and-services/electric-vehicles" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                  <h5>JCP&amp;L EV Driven Program</h5>
+                  <p>Residential incentives have changed — JCP&amp;L&apos;s residential make-ready window closed in 2025. Confirm current terms with JCP&amp;L.</p>
+                  <Link href="/jcpl-ev-charger-rebate">Read the PlugWise guide →</Link>
                 </div>
               </div>
               <div className="rebate">
