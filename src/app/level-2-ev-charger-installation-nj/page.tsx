@@ -452,7 +452,10 @@ export default function Level2EvChargerInstallationNj() {
                 <path d="M12 11v5M12 8h.01" />
               </svg>
               There&apos;s no universally &ldquo;better&rdquo; option — a licensed electrician
-              recommends the right setup for your charger, panel, and location.
+              recommends the right setup for your charger, panel, and location.{" "}
+              <Link href="/tesla-wall-connector-installation-nj" className="level2-inline-link">
+                Installing a Tesla Wall Connector? See our Tesla install guide →
+              </Link>
             </div>
           </div>
         </section>

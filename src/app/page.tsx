@@ -585,6 +585,7 @@ export default function Home() {
               <ul>
                 <li><Link href="/ev-charger-installation-nj/">EV Charger Installation in NJ</Link></li>
                 <li><Link href="/level-2-ev-charger-installation-nj">Level 2 EV Charger Installation</Link></li>
+                <li><Link href="/tesla-wall-connector-installation-nj">Tesla Wall Connector Installation</Link></li>
                 <li><Link href="/pseg-ev-charger-rebate">PSE&amp;G EV Charger Rebate Guide</Link></li>
                 <li><a href="#quote">Get a Quote</a></li>
                 <li><a href="#cost">Cost Factors</a></li>

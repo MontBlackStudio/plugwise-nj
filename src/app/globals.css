@@ -1315,3 +1315,175 @@ footer { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkes
   .level2-matrix-row { grid-template-columns: 1fr; gap: 10px; padding: 16px 18px; }
   .level2-matrix-tag { display: block; }
 }
+
+/* ============================================================= */
+/* ============ TESLA WALL CONNECTOR PAGE (scoped) ============= */
+/* All rules below are scoped to .tesla-page (or .tesla-* classes */
+/* used only on that route) — other pages unaffected.            */
+/* ============================================================= */
+
+/* ----- Hero ----- */
+.tesla-page .tesla-hero { overflow: hidden; }
+.tesla-nav-link { margin-left: auto; padding-left: 0; border-left: none; }
+.tesla-page .tesla-nav-link a { color: var(--pale); transition: color .15s; }
+.tesla-page .tesla-nav-link a:hover { color: var(--blue-soft); }
+
+.tesla-hero-inner { max-width: 880px; margin: 0 auto; padding: 54px 28px 70px; text-align: center; position: relative; z-index: 2; }
+.tesla-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 600; color: var(--blue-soft);
+  background: rgba(20,125,255,0.10); border: 1px solid var(--border-blue);
+  padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
+}
+.tesla-badge svg { width: 15px; height: 15px; }
+.tesla-page .tesla-hero h1 { font-size: 54px; line-height: 1.04; font-weight: 800; color: #fff; margin-bottom: 20px; }
+.tesla-page .tesla-hero h1 .blue { color: var(--blue-bright); text-shadow: 0 0 32px rgba(22,139,255,0.5); }
+.tesla-hero-sub { font-size: 17.5px; color: var(--pale); line-height: 1.6; max-width: 720px; margin: 0 auto 24px; }
+.tesla-hero-sub strong { color: #fff; font-weight: 700; }
+
+.tesla-spec-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 24px; }
+.tesla-spec {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 150px; padding: 12px 18px; border-radius: 12px;
+  background: rgba(10,34,73,0.55); border: 1px solid var(--border-blue);
+}
+.tesla-spec-k { font-family: var(--font-manrope), sans-serif; font-size: 17px; font-weight: 800; color: #fff; }
+.tesla-spec-v { font-size: 12px; color: var(--pale-dim); }
+
+.tesla-note {
+  display: flex; align-items: flex-start; gap: 12px; text-align: left;
+  max-width: 720px; margin: 0 auto 26px;
+  background: rgba(10,34,73,0.55); border: 1px solid var(--border-blue); border-left: 3px solid var(--blue);
+  border-radius: 12px; padding: 14px 18px; font-size: 13.5px; color: var(--pale); line-height: 1.55;
+}
+.tesla-note svg { width: 21px; height: 21px; color: var(--blue-soft); flex: none; margin-top: 1px; }
+.tesla-cta-row { justify-content: center; margin-bottom: 0; }
+
+/* ----- Inline links ----- */
+.tesla-inline-link { color: var(--blue); font-weight: 600; }
+.tesla-inline-link:hover { text-decoration: underline; }
+.tesla-link-row { margin-top: 16px; }
+
+/* ----- Install-readiness checklist ----- */
+.tesla-ready { margin-top: 22px; background: #fff; border: 1px solid var(--border-light); border-radius: 16px; padding: 26px 28px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.12); }
+.tesla-ready-title { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 16px; }
+.tesla-ready-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+.tesla-ready-item { display: flex; align-items: flex-start; gap: 11px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; }
+.tesla-ready-check { width: 24px; height: 24px; flex: none; border-radius: 7px; display: grid; place-items: center; background: rgba(25,169,116,0.12); color: var(--green); }
+.tesla-ready-check svg { width: 15px; height: 15px; }
+.tesla-ready .blue-callout { margin-top: 22px; }
+
+/* ----- 3-way setup comparison cards ----- */
+.tesla-compare3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.tesla-c3-card {
+  position: relative; display: flex; flex-direction: column; background: #fff;
+  border: 1px solid var(--border-light); border-radius: 16px; padding: 26px 24px;
+  box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10); transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.tesla-c3-card:hover { border-color: var(--blue-soft); box-shadow: 0 14px 30px -16px rgba(20,125,255,0.35); transform: translateY(-3px); }
+.tesla-c3-card.featured { border-color: var(--blue); box-shadow: 0 18px 40px -18px rgba(20,125,255,0.45); }
+.tesla-c3-flag {
+  position: absolute; top: -11px; left: 24px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.02em;
+  text-transform: uppercase; color: #fff; background: var(--blue); padding: 4px 11px; border-radius: 999px;
+  box-shadow: 0 6px 14px -6px rgba(20,125,255,0.7);
+}
+.tesla-c3-name { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.tesla-c3-tag {
+  display: inline-block; align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+  text-transform: uppercase; color: var(--ink-soft); background: var(--bg-light); border: 1px solid var(--border-light);
+  padding: 4px 10px; border-radius: 999px; margin-bottom: 16px;
+}
+.tesla-c3-card.featured .tesla-c3-tag { color: #fff; background: var(--blue); border-color: var(--blue); }
+.tesla-c3-card .svc-list { margin-top: 0; }
+
+/* ----- Panel/circuit decision path ----- */
+.tesla-path { list-style: none; max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.tesla-path-node {
+  position: relative; display: flex; gap: 16px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--border-light); border-left: 3px solid var(--blue);
+  border-radius: 14px; padding: 18px 20px; box-shadow: 0 2px 16px -10px rgba(3,19,46,0.12);
+}
+.tesla-path-node.tone-good { border-left-color: var(--green); }
+.tesla-path-node.tone-warn { border-left-color: #E8761F; }
+.tesla-path-num {
+  width: 38px; height: 38px; flex: none; border-radius: 10px; display: grid; place-items: center;
+  font-family: var(--font-manrope), sans-serif; font-weight: 800; font-size: 14px;
+  background: rgba(20,125,255,0.10); color: var(--blue); border: 1px solid var(--border-blue);
+}
+.tesla-path-node.tone-good .tesla-path-num { background: rgba(25,169,116,0.12); color: var(--green); border-color: rgba(25,169,116,0.3); }
+.tesla-path-node.tone-warn .tesla-path-num { background: rgba(232,118,31,0.12); color: #B5560F; border-color: rgba(232,118,31,0.3); }
+.tesla-path-body h3 { font-size: 15.5px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.tesla-path-body p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+.tesla-path-arrow { position: absolute; left: 38px; bottom: -19px; transform: translateX(-50%); z-index: 1; color: var(--blue-soft); font-size: 18px; line-height: 1; }
+
+/* ----- What-to-send photo cards ----- */
+.tesla-send { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.tesla-send-card {
+  background: #fff; border: 1px solid var(--border-light); border-radius: 14px; padding: 22px;
+  box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10); transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.tesla-send-card:hover { border-color: var(--blue-soft); box-shadow: 0 12px 28px -14px rgba(20,125,255,0.35); transform: translateY(-3px); }
+.tesla-send-icon { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: rgba(20,125,255,0.08); color: var(--blue); border: 1px solid var(--border-blue); margin-bottom: 14px; }
+.tesla-send-icon svg { width: 22px; height: 22px; }
+.tesla-send-card h3 { font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.tesla-send-card p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+
+/* ----- Rebate guide links ----- */
+.tesla-rebate-links { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 6px; }
+.tesla-rebate-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 18px;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.tesla-rebate-link:hover { border-color: var(--blue-soft); transform: translateY(-2px); box-shadow: 0 10px 24px -14px rgba(20,125,255,0.4); }
+.tesla-rebate-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+.tesla-rebate-go { font-size: 12.5px; font-weight: 600; color: var(--blue); flex: none; }
+
+/* ----- Quote CTA section ----- */
+.tesla-quote-section { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkest)); color: #fff; }
+.tesla-quote-layout { display: grid; grid-template-columns: 1fr 462px; gap: 40px; align-items: start; }
+.tesla-quote-copy h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.1; }
+.tesla-quote-copy > p { font-size: 15.5px; color: var(--pale); line-height: 1.65; margin-bottom: 22px; }
+.tesla-quote-copy .svc-list li { color: var(--pale); }
+.tesla-quote-copy .svc-list svg { color: var(--green); }
+/* Neutralize the shared quote card's hero-absolute positioning on this page */
+.tesla-quote-wrap .quote-card { position: static; top: auto; right: auto; width: 100%; max-width: 462px; margin: 0 auto; }
+
+/* ----- Disclaimer card ----- */
+.tesla-disclaimer {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-darkest) 100%);
+  border: 1px solid var(--border-blue); border-radius: 16px; padding: 28px 30px; color: #fff;
+}
+.tesla-disclaimer-icon {
+  width: 46px; height: 46px; flex: none; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(20,125,255,0.12); color: var(--blue-soft); border: 1px solid var(--border-blue);
+}
+.tesla-disclaimer-icon svg { width: 24px; height: 24px; }
+.tesla-disclaimer h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.tesla-disclaimer p { font-size: 13px; color: var(--pale); line-height: 1.6; max-width: 880px; }
+
+/* ----- CTA band sub-row + FAQ tweaks (scoped) ----- */
+.tesla-page .tesla-cta-sub { margin-top: 18px; gap: 14px; flex-wrap: wrap; }
+.tesla-page .faq-section .faq-list { max-width: 820px; }
+.tesla-page .faq-item h3.faq-q { font-size: 15px; }
+.tesla-page .faq-a.open { max-height: none; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1080px) {
+  .tesla-quote-layout { grid-template-columns: 1fr; gap: 28px; }
+  .tesla-send { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 920px) {
+  .tesla-compare3 { grid-template-columns: 1fr; }
+  .tesla-ready-list { grid-template-columns: 1fr; }
+  .tesla-rebate-links { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .tesla-hero-inner { padding: 36px 18px 44px; }
+  .tesla-page .tesla-hero h1 { font-size: clamp(28px, 7.5vw, 38px); }
+  .tesla-hero-sub { font-size: 15px; }
+  .tesla-spec { flex: 1 1 40%; min-width: 0; }
+  .tesla-send { grid-template-columns: 1fr; }
+  .tesla-disclaimer { flex-direction: column; gap: 14px; }
+}

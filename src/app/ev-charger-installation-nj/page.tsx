@@ -405,7 +405,8 @@ export default function EvChargerInstallationNj() {
                 <path d="M12 11v5M12 8h.01" />
               </svg>
               The right choice depends on your charger, panel, and install location — a licensed electrician will recommend the best option for your home.{" "}
-              <Link href="/level-2-ev-charger-installation-nj" className="svc-back">See our full Level 2 EV charger installation guide →</Link>
+              <Link href="/level-2-ev-charger-installation-nj" className="svc-back">See our full Level 2 EV charger installation guide →</Link>{" "}
+              <Link href="/tesla-wall-connector-installation-nj" className="svc-back">Tesla Wall Connector installation in NJ →</Link>
             </div>
           </div>
         </section>

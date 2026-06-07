@@ -328,6 +328,11 @@ export default function EvChargerInstallationCostNj() {
                 location.
               </span>
             </div>
+            <p className="cost-link-row">
+              <Link href="/tesla-wall-connector-installation-nj" className="cost-inline-link">
+                Installing a Tesla Wall Connector? See our Tesla Wall Connector installation guide →
+              </Link>
+            </p>
           </div>
         </section>
 
