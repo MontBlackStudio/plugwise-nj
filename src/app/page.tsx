@@ -162,6 +162,12 @@ export default function Home() {
               Secure. Private. No Spam.
             </div>
           </div>
+          <div className="mobile-nav-links">
+            <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
+            <a href="#how" className="mobile-nav-link">How It Works</a>
+            <a href="#cost" className="mobile-nav-link">Cost &amp; Rebates</a>
+            <a href="#faq" className="mobile-nav-link">FAQ</a>
+          </div>
         </nav>
 
         <div className="hero-grid">
