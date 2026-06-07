@@ -1133,3 +1133,185 @@ footer { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkes
   .jcpl-hero-sub { font-size: 15px; }
   .jcpl-disclaimer { flex-direction: column; gap: 14px; }
 }
+
+/* ============================================================= */
+/* ============ LEVEL 2 INSTALL PAGE (scoped) ================== */
+/* All rules below are scoped to .level2-page (or .level2-*       */
+/* classes used only on that route) — other pages unaffected.     */
+/* ============================================================= */
+
+/* ----- Hero ----- */
+.level2-page .level2-hero { overflow: hidden; }
+.level2-page .level2-nav-link { margin-left: auto; padding-left: 0; border-left: none; }
+.level2-page .level2-nav-link a { color: var(--pale); transition: color .15s; }
+.level2-page .level2-nav-link a:hover { color: var(--blue-soft); }
+
+.level2-hero-inner { max-width: 880px; margin: 0 auto; padding: 54px 28px 70px; text-align: center; position: relative; z-index: 2; }
+.level2-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 600; color: var(--blue-soft);
+  background: rgba(20,125,255,0.10); border: 1px solid var(--border-blue);
+  padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
+}
+.level2-badge svg { width: 15px; height: 15px; fill: var(--blue-soft); stroke: none; }
+.level2-page .level2-hero h1 { font-size: 54px; line-height: 1.04; font-weight: 800; color: #fff; margin-bottom: 20px; }
+.level2-page .level2-hero h1 .blue { color: var(--blue-bright); text-shadow: 0 0 32px rgba(22,139,255,0.5); }
+.level2-hero-sub { font-size: 17.5px; color: var(--pale); line-height: 1.6; max-width: 720px; margin: 0 auto 24px; }
+.level2-hero-sub strong { color: #fff; font-weight: 700; }
+
+.level2-spec-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 24px; }
+.level2-spec {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 150px; padding: 12px 18px; border-radius: 12px;
+  background: rgba(10,34,73,0.55); border: 1px solid var(--border-blue);
+}
+.level2-spec-k { font-family: var(--font-manrope), sans-serif; font-size: 17px; font-weight: 800; color: #fff; }
+.level2-spec-v { font-size: 12px; color: var(--pale-dim); }
+
+.level2-note {
+  display: flex; align-items: flex-start; gap: 12px; text-align: left;
+  max-width: 720px; margin: 0 auto 26px;
+  background: rgba(10,34,73,0.55); border: 1px solid var(--border-blue); border-left: 3px solid var(--blue);
+  border-radius: 12px; padding: 14px 18px; font-size: 13.5px; color: var(--pale); line-height: 1.55;
+}
+.level2-note svg { width: 21px; height: 21px; color: var(--blue-soft); flex: none; margin-top: 1px; }
+.level2-cta-row { justify-content: center; margin-bottom: 0; }
+
+/* ----- Inline links ----- */
+.level2-inline-link { color: var(--blue); font-weight: 600; }
+.level2-inline-link:hover { text-decoration: underline; }
+.level2-link-row { margin-top: 16px; }
+
+/* ----- Level 1 vs Level 2 comparison cards ----- */
+.level2-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.level2-compare-card {
+  display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border-light);
+  border-radius: 16px; padding: 26px 24px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+}
+.level2-compare-card.featured { border-color: var(--blue); box-shadow: 0 18px 40px -18px rgba(20,125,255,0.45); }
+.level2-compare-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.level2-compare-level { font-size: 20px; font-weight: 800; color: var(--ink); }
+.level2-compare-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; color: var(--ink-soft); background: var(--bg-light); border: 1px solid var(--border-light);
+}
+.level2-compare-card.featured .level2-compare-tag { color: #fff; background: var(--blue); border-color: var(--blue); }
+.level2-compare-spec { display: flex; align-items: baseline; gap: 10px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--border-light); }
+.level2-volt { font-family: var(--font-manrope), sans-serif; font-size: 32px; font-weight: 800; color: var(--blue); }
+.level2-circuit { font-size: 13px; color: var(--ink-soft); }
+.level2-compare-card .svc-list { margin-top: 0; }
+
+/* ----- Installation scope checklist ----- */
+.level2-scope { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.level2-scope-item {
+  display: flex; align-items: flex-start; gap: 13px;
+  background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 18px;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.5; box-shadow: 0 2px 16px -10px rgba(3,19,46,0.12);
+}
+.level2-scope-check { width: 26px; height: 26px; flex: none; border-radius: 8px; display: grid; place-items: center; background: rgba(25,169,116,0.12); color: var(--green); }
+.level2-scope-check svg { width: 16px; height: 16px; }
+
+/* ----- Hardwired vs outlet decision matrix ----- */
+.level2-matrix { border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.12); }
+.level2-matrix-head, .level2-matrix-row { display: grid; grid-template-columns: 1.1fr 1.3fr 1.3fr; gap: 16px; padding: 14px 22px; align-items: start; }
+.level2-matrix-head { background: var(--navy); color: #fff; }
+.level2-mh { font-size: 13px; font-weight: 700; }
+.level2-mh.hw { color: var(--blue-soft); }
+.level2-mh.out { color: #fff; }
+.level2-matrix-row { background: #fff; border-top: 1px solid var(--border-light); }
+.level2-matrix-row:nth-child(even) { background: #FAFCFF; }
+.level2-matrix-c { font-size: 13.5px; font-weight: 700; color: var(--ink); }
+.level2-matrix-v { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.level2-matrix-tag { display: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 3px; }
+.level2-matrix-tag.hw { color: var(--blue); }
+.level2-matrix-tag.out { color: var(--ink-soft); }
+
+/* ----- Install location cards ----- */
+.level2-loc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.level2-loc {
+  background: #fff; border: 1px solid var(--border-light); border-radius: 14px; padding: 22px;
+  box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10); transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.level2-loc:hover { border-color: var(--blue-soft); box-shadow: 0 12px 28px -14px rgba(20,125,255,0.35); transform: translateY(-3px); }
+.level2-loc-icon { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; background: rgba(20,125,255,0.08); color: var(--blue); border: 1px solid var(--border-blue); margin-bottom: 14px; }
+.level2-loc-icon svg { width: 22px; height: 22px; }
+.level2-loc h3 { font-size: 15.5px; font-weight: 700; color: var(--ink); margin-bottom: 7px; }
+.level2-loc p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+
+/* ----- Photo "what to send" strip ----- */
+.level2-send { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.level2-send-item {
+  position: relative; background: #fff; border: 1px solid var(--border-light); border-radius: 14px; padding: 24px 20px;
+  box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+}
+.level2-send-num {
+  width: 34px; height: 34px; border-radius: 50%; background: var(--blue); color: #fff;
+  font-weight: 700; font-size: 14px; display: grid; place-items: center; margin-bottom: 14px;
+  box-shadow: 0 8px 18px -6px rgba(20,125,255,0.6);
+}
+.level2-send-item h3 { font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.level2-send-item p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; }
+
+/* ----- Rebate guide links ----- */
+.level2-rebate-links { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 6px; }
+.level2-rebate-link {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 18px;
+  transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.level2-rebate-link:hover { border-color: var(--blue-soft); transform: translateY(-2px); box-shadow: 0 10px 24px -14px rgba(20,125,255,0.4); }
+.level2-rebate-name { font-size: 14px; font-weight: 700; color: var(--ink); }
+.level2-rebate-go { font-size: 12.5px; font-weight: 600; color: var(--blue); flex: none; }
+
+/* ----- Quote CTA section ----- */
+.level2-quote-section { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkest)); color: #fff; }
+.level2-quote-layout { display: grid; grid-template-columns: 1fr 462px; gap: 40px; align-items: start; }
+.level2-quote-copy h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.1; }
+.level2-quote-copy > p { font-size: 15.5px; color: var(--pale); line-height: 1.65; margin-bottom: 22px; }
+.level2-quote-copy .svc-list li { color: var(--pale); }
+.level2-quote-copy .svc-list svg { color: var(--green); }
+/* Neutralize the shared quote card's hero-absolute positioning on this page */
+.level2-quote-wrap .quote-card { position: static; top: auto; right: auto; width: 100%; max-width: 462px; margin: 0 auto; }
+
+/* ----- Disclaimer card ----- */
+.level2-disclaimer {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-darkest) 100%);
+  border: 1px solid var(--border-blue); border-radius: 16px; padding: 28px 30px; color: #fff;
+}
+.level2-disclaimer-icon {
+  width: 46px; height: 46px; flex: none; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(20,125,255,0.12); color: var(--blue-soft); border: 1px solid var(--border-blue);
+}
+.level2-disclaimer-icon svg { width: 24px; height: 24px; }
+.level2-disclaimer h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.level2-disclaimer p { font-size: 13.5px; color: var(--pale); line-height: 1.6; max-width: 820px; }
+
+/* ----- CTA band sub-row + FAQ tweaks (scoped) ----- */
+.level2-page .level2-cta-sub { margin-top: 18px; gap: 14px; flex-wrap: wrap; }
+.level2-page .faq-section .faq-list { max-width: 820px; }
+.level2-page .faq-item h3.faq-q { font-size: 15px; }
+.level2-page .faq-a.open { max-height: none; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1080px) {
+  .level2-quote-layout { grid-template-columns: 1fr; gap: 28px; }
+  .level2-loc-grid, .level2-send { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 920px) {
+  .level2-compare { grid-template-columns: 1fr; }
+  .level2-scope { grid-template-columns: 1fr; }
+  .level2-rebate-links { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .level2-hero-inner { padding: 36px 18px 44px; }
+  .level2-page .level2-hero h1 { font-size: clamp(28px, 7.5vw, 38px); }
+  .level2-hero-sub { font-size: 15px; }
+  .level2-spec { flex: 1 1 40%; min-width: 0; }
+  .level2-loc-grid, .level2-send { grid-template-columns: 1fr; }
+  .level2-disclaimer { flex-direction: column; gap: 14px; }
+  /* Decision matrix collapses to stacked cards with inline labels */
+  .level2-matrix-head { display: none; }
+  .level2-matrix-row { grid-template-columns: 1fr; gap: 10px; padding: 16px 18px; }
+  .level2-matrix-tag { display: block; }
+}

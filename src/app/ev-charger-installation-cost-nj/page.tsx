@@ -281,7 +281,10 @@ export default function EvChargerInstallationCostNj() {
                 <path d="M12 11v5M12 8h.01" />
               </svg>
               Most of these are visible in a photo of your panel and install spot — which is exactly
-              how a photo quote stays accurate.
+              how a photo quote stays accurate.{" "}
+              <Link href="/level-2-ev-charger-installation-nj" className="cost-inline-link">
+                New to Level 2? Start with our installation guide →
+              </Link>
             </div>
           </div>
         </section>
