@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PlugWise NJ
 
-## Getting Started
+**SEO-optimized lead-generation landing page for Level 2 EV charger installation in New Jersey.**
 
-First, run the development server:
+Connects homeowners with licensed NJ electricians through a photo-based quote form. Covers cost factors, utility rebates (PSE&G, JCP&L, Atlantic City Electric, NJ Clean Energy), permit guidance, and supported charger brands.
+
+---
+
+## Stack
+
+- **Next.js 16** (App Router, static export)
+- **React 19** with Server Components
+- **TypeScript**
+- Custom CSS with CSS variables (design-system tokens, no Tailwind in components)
+- `next/font` for Inter + Manrope (self-hosted, zero layout shift)
+
+---
+
+## Sections
+
+| Section | Description |
+|---|---|
+| Hero | Dark navy + glowing NJ map, 11-step floating quote form |
+| How It Works | 4-step process grid |
+| Cost Factors | 6-card grid of install variables |
+| Rebates | PSE&G, JCP&L, Atlantic City Electric, NJ Clean Energy |
+| Chargers | Tesla Wall Connector, ChargePoint, Wallbox, Emporia, NEMA 14-50 |
+| FAQ | Accordion with 6 common questions + electrician CTA card |
+| Trust Strip | Privacy, verified electricians, permit guidance, 5-star |
+| Footer | Nav links, NJ county service area, NJ outline SVG |
+
+---
+
+## SEO
+
+- `title`, `description`, `keywords` via Next.js Metadata API
+- Open Graph + Twitter Card tags
+- `LocalBusiness` + `Service` JSON-LD structured data
+- `canonical` URL and `robots` directives
+- Semantic HTML with `aria-*` attributes throughout
+
+---
+
+## Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # localhost:3000
+npm run build      # production build
+npm run typecheck  # tsc --noEmit
+npm run lint       # eslint
+npm run lint:fix   # eslint --fix
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Vercel auto-detects Next.js 16. Connect the repo from the Vercel dashboard — no extra config needed.
 
-## Learn More
+For environment variables (form backend, analytics): add via `vercel env add` or the dashboard, then `vercel env pull .env.local` locally.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## CI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub Actions runs on every push and PR to `main`:
 
-## Deploy on Vercel
+```
+npm ci → npm run build → tsc --noEmit
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See `.github/workflows/ci.yml`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Project structure
+
+```
+src/
+  app/
+    globals.css        # All CSS variables and layout styles
+    layout.tsx         # Root layout, fonts, SEO metadata, JSON-LD
+    page.tsx           # Main landing page (server component)
+  components/
+    QuoteForm.tsx      # Interactive 11-step quote form (client)
+    FaqSection.tsx     # FAQ accordion + electrician CTA (client)
+public/                # Static assets (favicons, OG image)
+.github/workflows/
+  ci.yml               # Build + typecheck on push/PR
+```

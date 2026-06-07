@@ -391,6 +391,43 @@ footer { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkes
 .foot-bottom .serving { display: flex; align-items: center; gap: 8px; }
 .foot-bottom .serving svg { color: var(--blue-soft); }
 
+/* ============ SERVICE HUB PAGE ============ */
+.svc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.svc-step {
+  border: 1px solid var(--border-light); border-radius: 14px; padding: 26px;
+  background: #fff; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+}
+.svc-num {
+  width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff;
+  font-weight: 700; font-size: 15px; display: grid; place-items: center; margin-bottom: 16px;
+  box-shadow: 0 8px 18px -6px rgba(20,125,255,0.6);
+}
+.svc-step h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.svc-step p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; }
+
+.svc-list { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-top: 4px; }
+.svc-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; }
+.svc-list svg { color: var(--green); flex: none; width: 18px; height: 18px; margin-top: 1px; }
+
+.area-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+.area-tag {
+  font-size: 13px; font-weight: 600; color: var(--blue);
+  background: rgba(20,125,255,0.07); border: 1px solid var(--border-blue);
+  border-radius: 999px; padding: 7px 14px;
+}
+
+.svc-back { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--blue); }
+.svc-back:hover { text-decoration: underline; }
+
+/* Scoped CTA-band / link spacing (replaces inline margin styles) */
+.service-hub-page .svc-cta { margin-top: 0; }
+.service-hub-page .svc-cta-sub { margin-top: 18px; }
+.service-hub-page .svc-link-row { margin-top: 14px; }
+
+/* FAQ items rendered statically open on the service hub — scoped to this page only */
+.service-hub-page .faq-section .faq-list { max-width: 760px; }
+.service-hub-page .faq-item h3.faq-q { font-size: 15px; }
+
 /* ============ RESPONSIVE ============ */
 
 /* Mobile nav anchor strip — hidden at desktop, shown ≤1080px */
@@ -515,6 +552,7 @@ footer { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkes
   .factor-grid { grid-template-columns: 1fr 1fr; }
   .charger-grid { grid-template-columns: 1fr 1fr; }
   .strip-grid { grid-template-columns: 1fr; }
+  .svc-steps { grid-template-columns: 1fr; gap: 14px; }
 
   /* Footer */
   .foot-grid { grid-template-columns: 1fr 1fr; }

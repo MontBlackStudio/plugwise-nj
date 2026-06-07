@@ -582,6 +582,7 @@ export default function Home() {
             <div className="foot-col">
               <h5>For Homeowners</h5>
               <ul>
+                <li><Link href="/ev-charger-installation-nj/">EV Charger Installation in NJ</Link></li>
                 <li><a href="#quote">Get a Quote</a></li>
                 <li><a href="#cost">Cost Factors</a></li>
                 <li><a href="#cost">Rebates &amp; Incentives</a></li>
