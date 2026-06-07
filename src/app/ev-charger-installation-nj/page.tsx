@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/ev-charger-installation-nj";
 
@@ -149,67 +150,16 @@ export default function EvChargerInstallationNj() {
       <main className="service-hub-page">
         {/* ============ HERO ============ */}
         <header className="hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-items">
-                <span className="nav-item">
-                  <svg className="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
-                  </svg>
-                  Licensed
-                  <br />
-                  Electricians
-                </span>
-                <span className="nav-item">
-                  <svg className="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M9 11l3 3 8-8" />
-                    <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" />
-                  </svg>
-                  Permit &amp; Code
-                  <br />
-                  Guidance
-                </span>
-                <span className="nav-item">
-                  <svg className="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="3" y="6" width="18" height="14" rx="2" />
-                    <circle cx="12" cy="13" r="3.2" />
-                    <path d="M8 6l1.5-2h5L16 6" />
-                  </svg>
-                  Quotes from
-                  <br />
-                  Your Photos
-                </span>
-              </div>
-              <div className="nav-secure">
-                <svg className="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <rect x="5" y="11" width="14" height="9" rx="2" />
-                  <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-                </svg>
-                Secure. Private. No Spam.
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#how" className="mobile-nav-link">How It Works</a>
-              <a href="#cost" className="mobile-nav-link">Cost</a>
-              <a href="#areas" className="mobile-nav-link">Service Area</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="installation"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#how", label: "How It Works" },
+              { href: "#cost", label: "Cost" },
+              { href: "#areas", label: "Service Area" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="hero-grid">
             {/* NJ MAP */}

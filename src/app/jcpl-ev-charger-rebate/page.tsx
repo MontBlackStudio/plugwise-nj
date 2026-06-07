@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/jcpl-ev-charger-rebate";
 
@@ -143,34 +144,16 @@ export default function JcplEvChargerRebate() {
       <main className="jcpl-page">
         {/* ============ HERO ============ */}
         <header className="hero jcpl-hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-secure jcpl-nav-link">
-                <Link href="/ev-charger-installation-nj">EV Charger Installation NJ →</Link>
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#status" className="mobile-nav-link">Program Status</a>
-              <a href="#eligibility" className="mobile-nav-link">Eligibility</a>
-              <a href="#territory" className="mobile-nav-link">Territory</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="jcpl"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#status", label: "Program Status" },
+              { href: "#eligibility", label: "Eligibility" },
+              { href: "#territory", label: "Territory" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="jcpl-hero-inner">
             <span className="jcpl-badge">

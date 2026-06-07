@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/level-2-ev-charger-installation-nj";
 
@@ -180,34 +181,16 @@ export default function Level2EvChargerInstallationNj() {
       <main className="level2-page">
         {/* ============ HERO ============ */}
         <header className="hero level2-hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-secure level2-nav-link">
-                <Link href="/ev-charger-installation-nj">EV Charger Installation NJ →</Link>
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#compare" className="mobile-nav-link">L1 vs L2</a>
-              <a href="#includes" className="mobile-nav-link">What&apos;s Included</a>
-              <a href="#options" className="mobile-nav-link">Hardwired vs Outlet</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="level2"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#compare", label: "L1 vs L2" },
+              { href: "#includes", label: "What's Included" },
+              { href: "#options", label: "Hardwired vs Outlet" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="level2-hero-inner">
             <span className="level2-badge">

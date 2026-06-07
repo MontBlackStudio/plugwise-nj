@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/tesla-wall-connector-installation-nj";
 
@@ -204,34 +205,16 @@ export default function TeslaWallConnectorInstallationNj() {
       <main className="tesla-page">
         {/* ============ HERO ============ */}
         <header className="hero tesla-hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-secure tesla-nav-link">
-                <Link href="/level-2-ev-charger-installation-nj">Level 2 Installation →</Link>
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#includes" className="mobile-nav-link">What&apos;s Included</a>
-              <a href="#setups" className="mobile-nav-link">Setups</a>
-              <a href="#panel" className="mobile-nav-link">Panel &amp; Circuit</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="tesla"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#includes", label: "What's Included" },
+              { href: "#setups", label: "Setups" },
+              { href: "#panel", label: "Panel & Circuit" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="tesla-hero-inner">
             <span className="tesla-badge">

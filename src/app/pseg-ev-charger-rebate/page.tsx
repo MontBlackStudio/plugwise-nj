@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/pseg-ev-charger-rebate";
 
@@ -178,34 +179,16 @@ export default function PsegEvChargerRebate() {
       <main className="pseg-page">
         {/* ============ HERO ============ */}
         <header className="hero pseg-hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-secure pseg-nav-link">
-                <Link href="/ev-charger-installation-nj">EV Charger Installation NJ →</Link>
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#program" className="mobile-nav-link">The Program</a>
-              <a href="#eligibility" className="mobile-nav-link">Eligibility</a>
-              <a href="#confirm" className="mobile-nav-link">Confirm First</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="pseg"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#program", label: "The Program" },
+              { href: "#eligibility", label: "Eligibility" },
+              { href: "#confirm", label: "Confirm First" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="pseg-hero-inner">
             <span className="pseg-updated">

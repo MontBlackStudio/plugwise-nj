@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import QuoteForm from "@/components/QuoteForm";
+import SiteNav from "@/components/SiteNav";
 
 const PAGE_URL = "https://plugwisenj.com/ev-charger-installation-cost-nj";
 
@@ -172,34 +173,16 @@ export default function EvChargerInstallationCostNj() {
       <main className="cost-page">
         {/* ============ HERO ============ */}
         <header className="hero cost-hero">
-          <nav className="topnav" aria-label="Main navigation">
-            <div className="topnav-inner">
-              <Link href="/" className="brand" aria-label="PlugWise NJ home">
-                <span className="brand-bolt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z" />
-                  </svg>
-                </span>
-                <span className="brand-name">PlugWise</span>
-                <span className="nj-pill">NJ</span>
-              </Link>
-              <div className="brand-sub">
-                New Jersey
-                <br />
-                EV Charger Quotes
-              </div>
-              <div className="nav-secure cost-nav-link">
-                <Link href="/ev-charger-installation-nj">EV Charger Installation NJ →</Link>
-              </div>
-            </div>
-            <div className="mobile-nav-links">
-              <a href="#quote" className="mobile-nav-link primary">Get Quote</a>
-              <a href="#drivers" className="mobile-nav-link">Cost Drivers</a>
-              <a href="#scenarios" className="mobile-nav-link">Scenarios</a>
-              <a href="#panel" className="mobile-nav-link">Panel Risk</a>
-              <a href="#faq" className="mobile-nav-link">FAQ</a>
-            </div>
-          </nav>
+          <SiteNav
+            current="cost"
+            mobileLinks={[
+              { href: "#quote", label: "Get Quote", primary: true },
+              { href: "#drivers", label: "Cost Drivers" },
+              { href: "#scenarios", label: "Scenarios" },
+              { href: "#panel", label: "Panel Risk" },
+              { href: "#faq", label: "FAQ" },
+            ]}
+          />
 
           <div className="cost-hero-inner">
             <span className="cost-badge">
