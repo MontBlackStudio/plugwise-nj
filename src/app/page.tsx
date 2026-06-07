@@ -408,9 +408,9 @@ export default function Home() {
               <div className="rebate">
                 <div className="rebate-logo" style={{ color: "#E8761F" }}>PSE&amp;G</div>
                 <div>
-                  <h5>PSE&amp;G EV Incentive Program</h5>
-                  <p>Up to $350 for eligible Level 2 charger installs.</p>
-                  <a href="https://nj.pseg.com/home/products_and_services/electricvehicles" target="_blank" rel="noopener noreferrer">Learn more →</a>
+                  <h5>PSE&amp;G EV Charging Program</h5>
+                  <p>Make-ready incentives may help with eligible electrical work. Confirm current terms with PSE&amp;G.</p>
+                  <Link href="/pseg-ev-charger-rebate">Read the PlugWise guide →</Link>
                 </div>
               </div>
               <div className="rebate">
@@ -583,6 +583,7 @@ export default function Home() {
               <h5>For Homeowners</h5>
               <ul>
                 <li><Link href="/ev-charger-installation-nj/">EV Charger Installation in NJ</Link></li>
+                <li><Link href="/pseg-ev-charger-rebate">PSE&amp;G EV Charger Rebate Guide</Link></li>
                 <li><a href="#quote">Get a Quote</a></li>
                 <li><a href="#cost">Cost Factors</a></li>
                 <li><a href="#cost">Rebates &amp; Incentives</a></li>

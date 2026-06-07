@@ -601,3 +601,180 @@ footer { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkes
   /* Opt pills: better touch target */
   .opt { padding: 10px 14px; min-height: 44px; display: inline-flex; align-items: center; }
 }
+
+/* ============================================================= */
+/* ============ PSE&G REBATE LANDING PAGE (scoped) ============== */
+/* All rules below are scoped to .pseg-page (or .pseg-* classes   */
+/* used only on that route) so the homepage is never affected.    */
+/* ============================================================= */
+
+/* ----- Hero ----- */
+.pseg-page .pseg-hero { overflow: hidden; }
+.pseg-nav-link { margin-left: auto; padding-left: 0; border-left: none; }
+.pseg-page .pseg-nav-link a { color: var(--pale); transition: color .15s; }
+.pseg-page .pseg-nav-link a:hover { color: var(--blue-soft); }
+
+.pseg-hero-inner {
+  max-width: 860px; margin: 0 auto; padding: 56px 28px 72px;
+  text-align: center; position: relative; z-index: 2;
+}
+.pseg-updated {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12.5px; font-weight: 600; color: var(--blue-soft);
+  background: rgba(20,125,255,0.10); border: 1px solid var(--border-blue);
+  padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
+}
+.pseg-updated svg { width: 15px; height: 15px; }
+.pseg-page .pseg-hero h1 {
+  font-size: 52px; line-height: 1.05; font-weight: 800; color: #fff; margin-bottom: 20px;
+}
+.pseg-page .pseg-hero h1 .blue { color: var(--blue-bright); text-shadow: 0 0 32px rgba(22,139,255,0.5); }
+.pseg-hero-sub {
+  font-size: 17.5px; color: var(--pale); line-height: 1.6; max-width: 680px; margin: 0 auto 26px;
+}
+.pseg-hero-sub strong { color: #fff; }
+
+.pseg-noaffil {
+  display: flex; align-items: flex-start; gap: 12px; text-align: left;
+  max-width: 720px; margin: 0 auto 30px;
+  background: rgba(10,34,73,0.55); border: 1px solid var(--border-blue); border-left: 3px solid var(--blue);
+  border-radius: 12px; padding: 16px 18px; font-size: 13.5px; color: var(--pale); line-height: 1.55;
+}
+.pseg-noaffil svg { width: 22px; height: 22px; color: var(--blue-soft); flex: none; margin-top: 1px; }
+
+.pseg-cta-row { justify-content: center; margin-bottom: 0; }
+
+/* ----- Section intros / lead copy ----- */
+.pseg-lead { max-width: 820px; font-size: 16px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 30px; }
+.pseg-lead em { color: var(--ink); font-style: italic; font-weight: 600; }
+.pseg-inline-link { color: var(--blue); font-weight: 600; }
+.pseg-inline-link:hover { text-decoration: underline; }
+
+/* ----- Eligibility + program cards ----- */
+.pseg-elig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pseg-program-grid { grid-template-columns: repeat(3, 1fr); margin-bottom: 6px; }
+.pseg-elig-card {
+  background: #fff; border: 1px solid var(--border-light); border-radius: 14px;
+  padding: 24px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.pseg-elig-card:hover { border-color: var(--blue-soft); box-shadow: 0 12px 28px -14px rgba(20,125,255,0.35); transform: translateY(-3px); }
+.pseg-check {
+  width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
+  background: rgba(25,169,116,0.10); color: var(--green); margin-bottom: 14px;
+}
+.pseg-check svg { width: 20px; height: 20px; }
+.pseg-elig-card h3 { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 8px; line-height: 1.25; }
+.pseg-elig-card p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+.pseg-amount {
+  display: inline-block; font-family: var(--font-manrope), sans-serif;
+  font-size: 24px; font-weight: 800; color: var(--blue); margin-bottom: 10px;
+}
+.pseg-amount-x { color: var(--ink-soft); font-size: 17px; }
+.pseg-elig-card-note { background: var(--bg-light); }
+
+/* ----- Confirm-before-applying checklist ----- */
+.pseg-confirm {
+  background: #fff; border: 1px solid var(--border-light); border-radius: 16px;
+  padding: 30px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.12); max-width: 880px;
+}
+.pseg-confirm-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; }
+.pseg-confirm-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+.pseg-confirm-list svg { width: 22px; height: 22px; color: var(--blue); flex: none; margin-top: 1px; }
+.pseg-confirm .not-affil { margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-light); }
+
+/* ----- Dual-impact factor cards ----- */
+.pseg-dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pseg-dual {
+  background: #fff; border: 1px solid var(--border-light); border-radius: 14px;
+  padding: 24px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+}
+.pseg-dual h3 { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 12px; }
+.pseg-dual-row { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; }
+.pseg-dual-row + .pseg-dual-row { border-top: 1px dashed var(--border-light); }
+.pseg-dual-row p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+.pseg-tag {
+  flex: none; width: 108px; font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+  text-transform: uppercase; padding: 5px 8px; border-radius: 7px; text-align: center; line-height: 1.3;
+}
+.pseg-tag-blue { background: rgba(20,125,255,0.10); color: var(--blue); border: 1px solid var(--border-blue); }
+.pseg-tag-green { background: rgba(25,169,116,0.10); color: var(--green); border: 1px solid rgba(25,169,116,0.25); }
+
+/* ----- Steps / timeline ----- */
+.pseg-steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.pseg-step {
+  position: relative; background: #fff; border: 1px solid var(--border-light); border-radius: 14px;
+  padding: 26px 22px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+}
+.pseg-step-num {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff;
+  font-weight: 700; font-size: 16px; display: grid; place-items: center; margin-bottom: 16px;
+  box-shadow: 0 8px 18px -6px rgba(20,125,255,0.6);
+}
+.pseg-step h3 { font-size: 15.5px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.pseg-step p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+
+/* ----- Quote CTA section ----- */
+.pseg-quote-section { background: linear-gradient(180deg, var(--navy-dark), var(--navy-darkest)); color: #fff; }
+.pseg-quote-layout { display: grid; grid-template-columns: 1fr 462px; gap: 40px; align-items: start; }
+.pseg-quote-copy h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.1; }
+.pseg-quote-copy > p { font-size: 15.5px; color: var(--pale); line-height: 1.65; margin-bottom: 22px; }
+.pseg-quote-copy .svc-list li { color: var(--pale); }
+.pseg-quote-copy .svc-list svg { color: var(--green); }
+/* Neutralize the shared quote card's hero-absolute positioning on this page */
+.pseg-quote-wrap .quote-card {
+  position: static; top: auto; right: auto; width: 100%; max-width: 462px; margin: 0 auto;
+}
+
+/* ----- Official sources ----- */
+.pseg-sources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pseg-source {
+  display: block; background: #fff; border: 1px solid var(--border-light); border-radius: 14px;
+  padding: 22px; box-shadow: 0 2px 16px -8px rgba(3,19,46,0.10);
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.pseg-source:hover { border-color: var(--blue-soft); box-shadow: 0 12px 28px -14px rgba(20,125,255,0.35); transform: translateY(-3px); }
+.pseg-source h3 { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.pseg-source p { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 14px; }
+.pseg-source-url { font-size: 13px; font-weight: 600; color: var(--blue); }
+
+/* ----- Utility disclaimer card ----- */
+.pseg-disclaimer {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-darkest) 100%);
+  border: 1px solid var(--border-blue); border-radius: 16px; padding: 28px 30px; color: #fff;
+}
+.pseg-disclaimer-icon {
+  width: 46px; height: 46px; flex: none; border-radius: 12px; display: grid; place-items: center;
+  background: rgba(20,125,255,0.12); color: var(--blue-soft); border: 1px solid var(--border-blue);
+}
+.pseg-disclaimer-icon svg { width: 24px; height: 24px; }
+.pseg-disclaimer h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.pseg-disclaimer p { font-size: 13.5px; color: var(--pale); line-height: 1.6; max-width: 760px; }
+
+/* ----- CTA band sub-row + FAQ tweaks (scoped) ----- */
+.pseg-page .pseg-cta-sub { margin-top: 18px; gap: 14px; }
+.pseg-page .faq-section .faq-list { max-width: 820px; }
+.pseg-page .faq-item h3.faq-q { font-size: 15px; }
+.pseg-page .faq-a.open { max-height: none; }
+
+/* ----- Responsive ----- */
+@media (max-width: 1080px) {
+  .pseg-quote-layout { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 920px) {
+  .pseg-elig-grid, .pseg-program-grid { grid-template-columns: 1fr 1fr; }
+  .pseg-dual-grid { grid-template-columns: 1fr; }
+  .pseg-steps { grid-template-columns: 1fr 1fr; }
+  .pseg-sources { grid-template-columns: 1fr; }
+  .pseg-confirm-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .pseg-hero-inner { padding: 36px 18px 44px; }
+  .pseg-page .pseg-hero h1 { font-size: clamp(28px, 7.5vw, 38px); }
+  .pseg-hero-sub { font-size: 15px; }
+  .pseg-elig-grid, .pseg-program-grid, .pseg-steps { grid-template-columns: 1fr; }
+  .pseg-disclaimer { flex-direction: column; gap: 14px; }
+  .pseg-dual-row { flex-direction: column; gap: 8px; }
+  .pseg-tag { width: auto; align-self: flex-start; }
+}
