@@ -355,6 +355,9 @@ export default function EvChargerInstallationNj() {
                 Most of these factors can be assessed from your photos, so quotes reflect your actual home.{" "}
                 <Link href="/#cost" className="svc-back">Compare cost &amp; rebate details on the home page →</Link>
               </div>
+              <p className="svc-link-row">
+                <Link href="/ev-charger-installation-cost-nj" className="svc-back">Read the full EV charger installation cost in NJ breakdown →</Link>
+              </p>
             </div>
           </div>
         </section>

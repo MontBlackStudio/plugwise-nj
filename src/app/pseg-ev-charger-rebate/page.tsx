@@ -387,6 +387,15 @@ export default function PsegEvChargerRebate() {
                 </div>
               ))}
             </div>
+            <div className="blue-callout">
+              <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 11v5M12 8h.01" />
+              </svg>
+              Curious how those same factors translate into dollars? See our{" "}
+              <Link href="/ev-charger-installation-cost-nj" className="pseg-inline-link">EV charger installation cost in NJ guide</Link>
+              .
+            </div>
           </div>
         </section>
 
@@ -531,6 +540,9 @@ export default function PsegEvChargerRebate() {
             <div className="charger-foot pseg-cta-sub">
               <Link href="/ev-charger-installation-nj" className="btn-ghost-light">
                 EV Charger Installation in NJ
+              </Link>
+              <Link href="/ev-charger-installation-cost-nj" className="btn-ghost-light">
+                Installation Cost in NJ
               </Link>
               <Link href="/" className="btn-ghost-light">Back to PlugWise NJ home</Link>
             </div>

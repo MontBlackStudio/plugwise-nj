@@ -397,7 +397,8 @@ export default function Home() {
                   <circle cx="12" cy="12" r="9" />
                   <path d="M12 11v5M12 8h.01" />
                 </svg>
-                We evaluate these factors from your photos to give you accurate quotes upfront.
+                We evaluate these factors from your photos to give you accurate quotes upfront.{" "}
+                <Link href="/ev-charger-installation-cost-nj" className="svc-back">See what affects EV charger installation cost in NJ →</Link>
               </div>
             </div>
 
